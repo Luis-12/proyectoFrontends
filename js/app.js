@@ -33,7 +33,6 @@ function getById(query) {
 }
 
 function init() {
-  getAll();
   router = new Navigo(null, false, '#!');
 	router.on({
 	  '/get': function(_,query) {
