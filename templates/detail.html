@@ -1,0 +1,37 @@
+<h4 style="margin-top: 15px">{{ artista }}</h4>
+<h5>Detalle de la pintura</h5>
+
+<form>
+  <div class="row">
+    <div class="six columns">
+       <label for="titleInput">Nombre</label>
+       <input class="u-full-width" id="title" type="text" value="{{ title }}" readonly/>
+    </div>
+    <div class="six columns">
+       <label for="nationalityInput">Nationality</label>
+       <input class="u-full-width" id="nationality" type="text" value="{{ nationality }}" readonly/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+       <label for="yearInput">Year</label>
+       <input class="u-full-width" id="year" type="text" value="{{ year }}"  readonly/>
+    </div>
+    <div class="six columns">
+       <label for="pinturasInput">Pinturas</label>
+       <input class="u-full-width" id="pinturas" type="text" value="{{ pinturas }}"  readonly/>
+    </div>
+    <div class="ten columns">
+      <label for="descriptionInput">Descripción</label>
+      <input class="u-full-width" id="description" type="text" value="{{ description }}"  readonly/>
+   </div>
+  </div>
+</form>
+
+<h5>Pinturas</h5>
+<ul>
+{{#pinturas}}
+  <li><a href="https://pinturas-server.herokuapp.com/get?id={{pintura_id}}" data-navigo>{{title}}</li>
+{{/pinturas}}
+</ul>
+

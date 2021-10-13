@@ -1,0 +1,8 @@
+<h3 style="margin-top: 15px">Información de artistas</h3>
+Esta sección muestra información de los artistas de las pinturas
+<p>
+<ul>
+  {{#.}}
+    <li><a href='/get/?id={{ id }}' data-navigo> {{ title }}</a></li>
+  {{/.}}
+</ul>
